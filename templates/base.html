@@ -1,0 +1,76 @@
+{% load static %}
+{% comment %} <link rel="stylesheet" type="text/css" href="'css/style.css'"> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav bar</title>
+    {% comment %} <link rel="stylesheet" href="style.css"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b17d4fa9e7.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            
+            <i class="fab fa-accusoft"></i>
+            <a href="index.html">Forest</a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="#">심리 검사</a>
+                <ul>
+                    <li>자가진단</li>
+                    <li><a href="psy_test.html">우울증</a></li>
+				    <li><a href="#">PTSD</a></li>
+				    <li><a href="#">공황장애</a></li>
+                    <li>그림 테스트</li>
+                    <li><a href="#">집 그리기</a></li>
+				    <li><a href="#">나무 그리기</a></li>
+				    <li><a href="#">사람 그리기</a></li>
+                </ul>
+			</li>
+            <li><a href="">심리 안정</a>
+                <ul>
+                    
+                    <li><a href="{% url 'mind_tree' %}">마인드 트리</a></li>
+                    <li><a href="{% url 'secret_diary' %}">하루 비밀 일기</a></li>
+                    <li><a href="{% url 'missing_voice' %}">그리운 목소리</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="">전문가 찾기</a>
+            
+            
+            </li>
+
+
+            <li><a href="">커뮤니티</a>
+            
+            
+            </li>
+        </ul>
+
+        <ul class="navbar__icons">
+            <li><a href="login_resist_form.html">마이페이지</a></li>
+            <li><a href="">로그아웃</a></li>
+        </ul>
+
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+</div>
+
+    {% block content%}
+    {% endblock content%}
+
+</body>
+</html>
