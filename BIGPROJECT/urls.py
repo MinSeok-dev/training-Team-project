@@ -22,5 +22,7 @@ urlpatterns = [
     path('psy_stable/', include('psy_stable.urls')),
     path('search_expert/', include('search_expert.urls')),
     path('community/', include('community.urls')),
+    path('', include('main.urls')),
+    
     
 ]
